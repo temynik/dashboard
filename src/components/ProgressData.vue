@@ -11,9 +11,9 @@
         </b-progress>
         <b-progress format="percent" :max="100" size="is-medium">
             <template #bar>
-                <b-progress-bar :value="10" show-value>10% (выполнено)</b-progress-bar>
+                <b-progress-bar :value="30" show-value>30% (выполнено)</b-progress-bar>
                 <b-progress-bar :value="20" type="is-primary" show-value>20% (в работе)</b-progress-bar>
-                <b-progress-bar :value="70" type="is-warning" show-value>70% (на проверке)</b-progress-bar>
+                <b-progress-bar :value="50" type="is-warning" show-value>50% (на проверке)</b-progress-bar>
             </template>
         </b-progress>
         <b-progress 
@@ -24,7 +24,6 @@
         >
             100% (выполнено)
         </b-progress>
-        <b-progress></b-progress>
     </div>
 </template>
 

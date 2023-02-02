@@ -2,23 +2,29 @@
     <section class="section pt-3">
         <div class="columns box">
             <div class="column">
-                <b-tabs v-model="activeTab" @input="activeTab == 0 ? false : getTable()">	
+                <b-tabs v-model="activeTab" @input="activeTab == 0 ? false : getTable()">
                     <b-tab-item label="Статистика">
-                        <ProgressData/>
-                        <vue-circle
-                            :progress="50"
-                            :size="100"
-                            :reverse="false"
-                            line-cap="round"
-                            :fill="fill"
-                            empty-fill="rgba(0, 0, 0, .1)"
-                            :animation-start-value="0.0"
-                            :start-angle="0"
-                            insert-mode="append"
-                            :thickness="5"
-                            :show-percent="true">
-                            <p>Slot!</p>
-                        </vue-circle>
+                        <div class="columns">
+                            <div class="column is-four-fifths">
+                                <ProgressData/>
+                            </div>
+                            <div class="column has-text-right">
+                                <vue-circle
+                                    :progress="63"
+                                    :size="200"
+                                    :reverse="false"
+                                    line-cap="round"
+                                    :fill="fill"
+                                    empty-fill="rgba(0, 0, 0, .1)"
+                                    :animation-start-value="0.0"
+                                    :start-angle="0"
+                                    insert-mode="append"
+                                    :thickness="5"
+                                    :show-percent="true">
+                                    <p>Просмотрено теории</p>
+                                </vue-circle>
+                            </div>
+                        </div>
                     </b-tab-item>
 
                     <b-tab-item label="Просмотренные задачи">
@@ -51,7 +57,7 @@ export default {
         return {
             activeTab: 0,
             tableItems: [],
-            fill : { gradient: ["red", "green", "blue"] }
+            fill : { gradient: ['#7957d6', '#48c78e'] }
         }
     },
     methods: {
